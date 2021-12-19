@@ -10,6 +10,7 @@ public class EmployWageSimulation {
 		System.out.print("welcome to the employ wage simulation ");
      if(presentOrAbsent==0) {
     	 System.out.println("Employ is present ");
+    	 System.out.print("employ is one day wage is "+20*8);
      }else System.out.println("Employ is absent");
 
 	}
