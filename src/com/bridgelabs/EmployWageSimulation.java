@@ -4,12 +4,26 @@ import java.util.Random;
 
 public class EmployWageSimulation {
 	Random rand=new Random();
-	int fulltimeEmp=1,partTimeEmploy=2;
-	final int oneDayWage=20*8;
+	int fulltimeEmp=1;
+	int partTimeEmploy=2;
+	int oneDayWage=8;
+	int maxDayInMonth=20;
+	int maxWorkingHours=8;
 	int countDayPresent=0;
+	
+	public EmployWageSimulation(int fulltimeEmp, int partTimeEmploy, int oneDayWage, int maxDayInMonth,
+			int maxWorkingHours, int countDayPresent) {
+		super();
+		this.fulltimeEmp = fulltimeEmp;
+		this.partTimeEmploy = partTimeEmploy;
+		this.oneDayWage = oneDayWage;
+		this.maxDayInMonth = maxDayInMonth;
+		this.maxWorkingHours = maxWorkingHours;
+		this.countDayPresent = countDayPresent;
+	}
 	public void wageCalculator() {
-		while(countDayPresent<20) {
-			if(countDayPresent*oneDayWage>=100) {
+		while(countDayPresent<maxDayInMonth) {
+			if(countDayPresent*oneDayWage>=maxWorkingHours) {
 				break;
 			}
 		int presentOrAbsent=rand.nextInt(2);
