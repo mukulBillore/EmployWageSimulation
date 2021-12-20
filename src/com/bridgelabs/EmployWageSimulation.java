@@ -9,7 +9,10 @@ public class EmployWageSimulation {
 		int fulltimeEmp=1,partTimeEmploy=2;
 		int oneDayWage=20*8;
 		int countDayPresent=0;
-		for(int i=1;i<=20;i++) {
+		while(countDayPresent<20) {
+			if(countDayPresent*oneDayWage>=100) {
+				break;
+			}
 		int presentOrAbsent=rand.nextInt(2);
 		
 		System.out.print("welcome to the employ wage simulation ");
