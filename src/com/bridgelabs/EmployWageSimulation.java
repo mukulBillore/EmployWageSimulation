@@ -3,25 +3,10 @@ package com.bridgelabs;
 import java.util.Random;
 
 public class EmployWageSimulation {
-	Random rand=new Random();
-	int fulltimeEmp=1;
-	int partTimeEmploy=2;
-	int oneDayWage=8;
-	int maxDayInMonth=20;
-	int maxWorkingHours=8;
-	int countDayPresent=0;
 	
-	public EmployWageSimulation(int fulltimeEmp, int partTimeEmploy, int oneDayWage, int maxDayInMonth,
-			int maxWorkingHours, int countDayPresent) {
-		super();
-		this.fulltimeEmp = fulltimeEmp;
-		this.partTimeEmploy = partTimeEmploy;
-		this.oneDayWage = oneDayWage;
-		this.maxDayInMonth = maxDayInMonth;
-		this.maxWorkingHours = maxWorkingHours;
-		this.countDayPresent = countDayPresent;
-	}
-	public void wageCalculator() {
+	
+	public void wageCalculator(int countDayPresent,int maxDayInMonth,int oneDayWage,int maxWorkingHours,int fulltimeEmp) {
+		Random rand=new Random();
 		while(countDayPresent<maxDayInMonth) {
 			if(countDayPresent*oneDayWage>=maxWorkingHours) {
 				break;
@@ -44,6 +29,8 @@ public class EmployWageSimulation {
 	}
 	public static void main(String[] args) {
 		EmployWageSimulation wage1= new EmployWageSimulation();
-		wage1.wageCalculator();
+		wage1.wageCalculator(0,20,20,100,1);
+		wage1.wageCalculator(0,30,30,120,1);
 	}
+	
 }
